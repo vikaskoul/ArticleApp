@@ -1,0 +1,231 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #efefef;
+}
+
+a {
+  color: #00B7FF;
+}
+
+footer{
+	background: #333;
+    height: 40px;
+    text-align: center;
+    position:relative;
+   left:0px;
+   bottom:0px;
+   width:100%;
+}
+
+footer p{
+	padding-top:10px;
+	color: #fff;
+}
+
+/* IE 6 */
+* html #footer {
+   position:absolute;
+   top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
+}
+
+.heading {
+    background-color: #0C9;
+    color: #fff;
+    padding: 7px;
+    padding-left: 20px;
+    font-size: 22px;
+    margin: 0;
+}
+
+.categories {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.categoryCard {
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 10px;
+    background: #333;
+    height: 140px;
+    width: 25%;
+    margin: 15px;
+}
+
+.row{
+  margin: 0;
+}
+
+.float{
+  position:fixed;
+  width:60px;
+  height:60px;
+  bottom:40px;
+  right:40px;
+  z-index: 999;
+  background-color:#0C9;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+  margin-top:22px;
+}
+
+.categoryCard a {
+    text-decoration: none;
+}
+
+.categoryCard a h3 {
+    font-size: 16px;
+}
+
+.categoryCard a p {
+    font-size: 14px;
+}
+
+.categories-view-page,
+.recent-articles-view-page {
+    background: #cdcdcd;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.categoryCard a{
+    color: #fff;
+}
+.categoryCard a:hover{
+    color: #0C9;
+}
+
+.recent-articles-view-page {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+table, th , td  {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+table tr:nth-child(odd) {
+  background-color: #fff;
+}
+table tr:nth-child(even) {
+  background-color: #e3f9f3;
+}
+
+td.art-body {
+    width: 34%;
+}
+th{
+  padding:10px;
+}
+
+.article-view-page.ng-scope,
+.cat-articles-view-page.ng-scope {
+    background: #fff;
+    padding: 15px;
+}
+
+.article-view-page h1{
+  margin: 20px 0;
+}
+
+.article-view-page .article-body{
+  height:300px;
+}
+
+.actions {
+    margin-top: 15px;
+}
+
+.update-article-page,
+.add-article-page {
+    margin: 10px 10px 20px 10px;
+    height: 516px;
+}
+
+.update-article-page form.ng-pristine.ng-valid,
+.add-article-page form.ng-pristine.ng-valid{
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+a.go-back-link{
+  margin:20px 0;
+  color:#000;
+}
+
+a.go-back-link:hover{
+  color:#0C9;
+}
+
+.cat-articles-view-page .go-back-link,
+.articles-view-page .go-back-link{
+    position: relative;
+    top: 20px;
+    left: 15px;
+}
+
+.cat-articles-view-page .row,
+.articles-view-page .row {
+    margin: 40px;
+}
+
+.cat-articles-view-page .row .articles{
+    width:100%;
+}
+
+.cat-articles-view-page .col-md-12.article-preview.articleCard {
+    margin:20px 0;
+    height: 200px;
+    border-bottom: 1px solid #cdcdcd;
+}
+
+.recent-articles-view-page a.view-all{
+    position: absolute;
+    right: 10%;
+    bottom: 20%;
+    color: #fff;
+    text-decoration: none;
+}
+
+.articles-view-page.ng-scope {
+  /*  height: 540px; */
+}
+
+.article-view-page .actions a.btn-default{
+  background: #efefef;
+}
+
+a.navbar-brand{
+  margin: 0  auto;
+}
+
+.cat-articles-view-page .articles a{
+  text-decoration: none;
+}
+
+.cat-articles-view-page .articles a h5{
+  color:#000;
+  font-size: 22px;
+}
+
+.cat-articles-view-page .articles a p{
+  color:#000;
+  font-size: 18px;
+}
+
+.cat-articles-view-page .articles .bottom-footer .categoryDetail{
+  color:#000;
+  margin-bottom: 10px;
+}
+
+.cat-articles-view-page .articles .bottom-footer .timestamp{
+  color:#000;
+  margin-bottom: -10px;
+}

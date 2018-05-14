@@ -1,0 +1,25 @@
+<div class="cat-articles-view-page">
+	<h3 class="heading">Articles by <i>"{{catgryName}}"</i></h3>
+	<div ng-controller="ArticlesCategoryController">
+		<a href="#!/categories"  class="go-back-link">Go Back</a>
+		<div class="row">
+			<div class="articles">
+				<div ng-repeat="article in Catgry_articles">
+					<div class="col-md-12 article-preview articleCard">
+						<a href="#!/articles/detail/{{article._id}}">
+							<h5>{{article.title}}</h5>
+							<p>{{article.body | limitTo: 200}}</p>
+							<div class="bottom-footer">
+								<div class="categoryDetail">Category: {{article.category}}</div>
+								<div class="timestamp">Posted On: {{article.date  | date:'MM/dd/yyyy'}}</div>
+							</div>
+						</a>
+					</div>
+					<div ng-if="Catgry_articles == false">
+						No Articles found
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

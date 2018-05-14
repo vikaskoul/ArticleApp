@@ -1,0 +1,45 @@
+<div class="categories-view-page">
+	<h3 class="heading">Categories</h3>
+	<div ng-controller="CategoriesController">
+		<div class="row">
+			<div class="categories">
+				<div ng-repeat="category in categories" class="categoryCard">
+					<div class="col-md-12">
+						<a href="#!/articles/category/{{category.name}}">
+							<h3>{{category.name}}</h3>
+							<p>{{category.body | limitTo: 75}}</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="recent-articles-view-page">
+	<h3 class="heading">Recent Articles</h3>
+	<a href="#!/articles" class="view-all">View All</a>
+	<div ng-controller="ArticlesController">
+		<div class="row">
+			<div class="articles">
+				<table>
+				  <tr>
+				    <th>Title</th>
+				    <th>Description</th>
+				    <th>Category</th>
+				    <th>Created On</th>
+				    <th>View</th>
+				  </tr>
+					<tr ng-repeat="article in articles | orderBy: 'date': true">
+						<div class="col-md-12 article-preview articleCard">
+							<td class="art-title">{{article.title}}</td>
+							<td class="art-body">{{article.body | limitTo: 200}}</td>
+							<td class="art-cat">{{article.category}}</td>
+							<td class="art-date">{{article.date | date:'MM/dd/yyyy'}}</td>
+							<td class="art-view"><a href="#!/articles/detail/{{article._id}}">View Article</a></td>
+						</div>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

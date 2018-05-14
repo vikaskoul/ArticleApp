@@ -1,0 +1,28 @@
+<div class="articles-view-page">
+	<h3 class="heading">Articles</h3>
+	<div ng-controller="ArticlesController">
+		<a href="#!/categories"  class="go-back-link">Go Back</a>
+		<div class="row">
+			<div class="articles">
+				<table>
+				  <tr>
+				    <th>Title</th>
+				    <th>Description</th>
+				    <th>Category</th>
+				    <th>Created On</th>
+				    <th>View</th>
+				  </tr>
+					<tr ng-repeat="article in articles | orderBy: 'date': true">
+						<div class="col-md-12 article-preview articleCard">
+							<td class="art-title">{{article.title}}</td>
+							<td class="art-body">{{article.body | limitTo: 200}}</td>
+							<td class="art-cat">{{article.category}}</td>
+							<td class="art-date">{{article.date | date:'MM/dd/yyyy'}}</td>
+							<td class="art-view"><a href="#!/articles/detail/{{article._id}}">View Article</a></td>
+						</div>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

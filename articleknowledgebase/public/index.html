@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" ng-app="myArticleLib">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Article Application</title>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="stylesheets\style.css" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <a class="navbar-brand" href="#!/categories"><img src="images/logo.png" class="logo-image" alt="My Library Catalog" height="42" width="42"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!--img src="images/newArticle.png" class="add-article-icon"/-->
+      <a href="#!/articles/add" class="float">
+        <i class="fa fa-plus my-float"></i>
+      </a>
+    </nav>
+
+    <main role="main" class="container">
+      <div ng-view></div>
+    </main>
+    <footer>
+        <p>&copy; 2018 Article Library</p>
+    </footer>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers/articles.controller.js"></script>
+    <script src="controllers/categories.controllers.js"></script>
+  </body>
+</html>
